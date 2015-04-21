@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}{% end %}
+
+{% block styles %}{% end %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/static/js/chat.js"></script>
+{% end %}
+
+{% block content %}
+    <nav class="tabs"></nav>
+    <aside class="aside-grid"></aside>
+    <section class="room-grid" id="messages-list">
+    </section>
+    <section class="input-message-grid">
+        <form id="message-form" method="get">
+            {{ data['user_name'] }}
+            {% raw form.user_name %}
+            {% raw form.message.label %}
+            {% raw form.message(size=100) %}
+            {% raw form.send %}
+            {% for err in form.errors %}
+                <em>{{ form.errors[err] }}</em>
+            {% end %}
+        </form>
+    </section>
+{% end %}
+

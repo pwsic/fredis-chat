@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>{% block title %}{% end %}</title>
+        <link rel="stylesheet" href="/static/css/chat.css">
+        {% block styles %} {% end %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        {% block scripts %} {% end %}
+    </head>
+    <body>
+        <header class="header"></header>
+        {% block content %} {% end %}
+        <footer class="footer"></footer>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}{% end %}
+
+{% block styles %}{% end %}
+
+{% block scripts %}{% end %}
+
+{% block content %}
+    <section class="common-grid">
+        <form id="login-form" method="post" name="login-form">
+            <p>{% raw form.user_name.label %}{% raw form.user_name %}</p>
+            <p>{% raw form.password.label %}{% raw form.password %}</p>
+            <p>{% raw form.submit %}</p>
+            {% if form.errors %}
+                {% for err in form.errors %}
+                    <em>{{ form.errors[err] }}</em>
+                {% end %}
+            {% end %}
+        </form>
+    </section>
+{% end %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}{% end %}
+
+{% block styles %}{% end %}
+
+{% block scripts %}{% end %}
+
+{% block content %}
+    <nav class="tabs"></nav>
+    <section class="common-grid">
+    <form id="room-manager-form" method="post">
+        {% raw form.room_name.label %}
+        {% raw form.room_name %}
+        {% raw form.owners %}
+        {% for err in form.errors %}
+            <em>{{ form.errors[err] }}</em>
+        {% end %}
+    </form>
+    </section>
+{% end %}

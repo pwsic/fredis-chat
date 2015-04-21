@@ -1,0 +1,6 @@
+ipdb
+click
+nose
+tornado
+tornado-redis
+wtforms

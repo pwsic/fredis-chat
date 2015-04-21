@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{% end %}
+{% block styles %}{% end %}
+{% block scripts %}{% end %}
+{% block content %}
+    {% if form %}
+        <section class="common-grid">
+            <form id="registration-form" method="post" name="registration-form">
+                <p>{% raw form.user_name.label %}{% raw form.user_name %}</p>
+                <p>{% raw form.password.label %}{% raw form.password %}</p>
+                <p>{% raw form.confirm_password.label %}{% raw form.confirm_password %}</p>
+                <p>{% raw form.submit %}</p>
+                {% if form.errors %}
+                    {% for err in form.errors %}
+                        <em>{{ form.errors[err] }}</em>
+                    {% end %}
+                {% end %}
+            </form>
+        </section>
+    {% else %}
+        <p>Congratulations you have registred, please click on the link bellow to authenticate</p>
+        <p></p>
+    {% end %}
+{% end %}

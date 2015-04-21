@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}{% end %}
+
+{% block styles %}{% end %}
+
+{% block scripts %}
+    <script type="text/javascript" src="/static/js/chat.js"></script>
+{% end %}
+
+{% block content %}
+    <!-- user destination nav bellow -->
+    <nav class="tabs"></nav>
+    <section class="common-grid" id="messages-list">
+    </section>
+    <section class="input-message-grid">
+        <form id="message-form" method="get">
+            {% raw form.message.label %}
+            {% raw form.message(size=100) %}
+            {% raw form.send %}
+            {% for err in form.errors %}
+                <em>{{ form.errors[err] }}</em>
+            {% end %}
+    </form>
+    </section>
+{% end %}
