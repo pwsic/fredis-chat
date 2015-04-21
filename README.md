@@ -1,4 +1,4 @@
-Fredis Chat - (A)//(N) other Redis Tornado Chat
+Fredis(Fucking Redis) Chat - (A)//(N) other Redis Tornado Chat
 =============
 
 ISSUES
