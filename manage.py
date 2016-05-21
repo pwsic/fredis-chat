@@ -14,7 +14,7 @@ def cli():
 def runserver():
     from chat.app import Application
     click.echo('Running tornado http server')
-    http_server = HTTPServer(Application())
+    http_server = HTTPServer(Application)
     http_server.listen(8000)
     IOLoop.instance().start()
 

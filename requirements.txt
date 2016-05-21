@@ -4,3 +4,4 @@ nose
 tornado
 tornado-redis
 wtforms
+paste-wsgiref-simpleserver
